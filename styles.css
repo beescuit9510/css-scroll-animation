@@ -1,0 +1,40 @@
+body {
+  background-color: #efedd6;
+}
+.title {
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+}
+.box {
+  max-width: 450px;
+  width: 90%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: steelblue;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 3rem;
+  text-transform: capitalize;
+  opacity: 0;
+  transition: 0.2s all ease;
+}
+.box:nth-of-type(odd) {
+  transform: translateX(300%);
+}
+.box:nth-of-type(even) {
+  transform: translateX(-300%);
+}
+.box.active {
+  transform: translateX(0);
+  opacity: 1;
+}
